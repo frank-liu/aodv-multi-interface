@@ -1,0 +1,11 @@
+ifconfig eth0 172.20.2.1 up
+ifconfig eth0 hw ether 00:00:00:00:20:00
+
+# White-list for r2
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:10:00 -j ACCEPT
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:30:00 -j ACCEPT
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:40:00 -j ACCEPT
+
+# Drop any other packet coming from a different MAC
+iptables -t mangle -A PREROUTING -i eth0 -j DROP
+

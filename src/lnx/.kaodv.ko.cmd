@@ -1,0 +1,1 @@
+cmd_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.ko := ld -r  -m elf_i386  --build-id -o /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.ko /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.o /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o
