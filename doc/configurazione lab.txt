@@ -1,0 +1,10 @@
+La rete prevede sei macchine virtuali e due reti diverse:
+
+-nella rete A ci sono:
+	-macchina 1 collegata a macchina 2
+	-macchina 2 collegata a macchina 3 e 4
+	-macchina 3 collegata a macchina 5 e 6
+	-macchina 4 collegata a macchina 5
+
+-nella rete B ci sono:
+	-macchina 1 collegat a macchina 3

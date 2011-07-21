@@ -1,7 +1,7 @@
-cmd_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o := gcc -Wp,-MD,/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/.kaodv.mod.o.d  -nostdinc -isystem /usr/lib/gcc/i486-linux-gnu/4.4.3/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -O2 -Wframe-larger-than=1024  -fno-stack-protector   -D__arch_um__ -DSUBARCH=\"i386\" -Iarch/um/include -I/home/antlab/emulation/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas -Dvmap=kernel_vmap -Din6addr_loopback=kernel_in6addr_loopback -Din6addr_any=kernel_in6addr_any -funit-at-a-time -march=i686 -mtune=core2 -mtune=generic -mpreferred-stack-boundary=2 -ffreestanding -D_LARGEFILE64_SOURCE -Derrno=kernel_errno -Dsigprocmask=kernel_sigprocmask -Dmktime=kernel_mktime -Dstrrchr=kernel_strrchr -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -D KERNEL26    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kaodv.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(kaodv)" -DMODULE -c -o /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.c
+cmd_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o := gcc -Wp,-MD,/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/.kaodv.mod.o.d  -nostdinc -isystem /usr/lib/gcc/i486-linux-gnu/4.6.1/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -O2 -Wframe-larger-than=1024  -fno-stack-protector   -D__arch_um__ -DSUBARCH=\"i386\" -Iarch/um/include -I/hosthome/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas -Dvmap=kernel_vmap -Din6addr_loopback=kernel_in6addr_loopback -Din6addr_any=kernel_in6addr_any -funit-at-a-time -march=i686 -mtune=core2 -mtune=generic -mpreferred-stack-boundary=2 -ffreestanding -D_LARGEFILE64_SOURCE -Derrno=kernel_errno -Dsigprocmask=kernel_sigprocmask -Dmktime=kernel_mktime -Dstrrchr=kernel_strrchr -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -D KERNEL26    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kaodv.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(kaodv)" -DMODULE -c -o /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.c
 
-deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o := \
-  /home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.c \
+deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o := \
+  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.c \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
@@ -127,7 +127,7 @@ deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o := 
     $(wildcard include/config/debug/spinlock/sleep.h) \
     $(wildcard include/config/printk.h) \
     $(wildcard include/config/numa.h) \
-  /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.6.1/include/stdarg.h \
   include/linux/linkage.h \
   include/asm/linkage.h \
   include/asm/arch/linkage.h \
@@ -170,7 +170,7 @@ deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o := 
   include/asm-generic/errno-base.h \
   arch/um/include/um_uaccess.h \
   include/asm/elf.h \
-  /home/antlab/emulation/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas/skas.h \
+  /hosthome/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas/skas.h \
   include/asm/fixmap.h \
     $(wildcard include/config/highmem.h) \
   include/asm/kmap_types.h \
@@ -275,6 +275,6 @@ deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o := 
   include/linux/vermagic.h \
   include/linux/utsrelease.h \
 
-/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o: $(deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o)
+/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o: $(deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o)
 
-$(deps_/home/antlab/emulation/labs/routing/tools/aodv-uu-0.9.6/lnx/kaodv.mod.o):
+$(deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.mod.o):

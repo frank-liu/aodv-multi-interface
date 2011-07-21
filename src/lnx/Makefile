@@ -12,8 +12,8 @@ KOBJS_MIPS := $(KOBJS:%.o=%-mips.o)
 #KERNEL_DIR=/lib/modules/$(KERNEL)/build
 #KERNEL_INC=$(KERNEL_DIR)/include
 
-#KERNEL="/home/antlab/emulation/netkit/kernel/build/linux-2.6.26.5"
-KERNEL=$(realpath ~)/netkit/kernel/build/linux-2.6.26.5
+#KERNEL="/hosthome/netkit/kernel/build/linux-2.6.26.5"
+KERNEL=/hosthome/netkit/kernel/build/linux-2.6.26.5
 KERNEL_DIR=${KERNEL}
 KERNEL_INC=$(KERNEL_DIR)/include
 THIS_DIR=$(shell pwd)
