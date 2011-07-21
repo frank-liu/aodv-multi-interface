@@ -18,7 +18,7 @@ OBJS_MIPS = $(SRC:%.c=%-mips.o)
 OBJS_NS = $(SRC_NS:%.c=%-ns.o)
 OBJS_NS_CPP = $(SRC_NS_CPP:%.cc=%-ns.o)
 
-KERNEL=$(shell uname -r)
+KERNEL=/hosthome/netkit/kernel/build/linux-2.6.26.5
 # Change to compile against different kernel (can be overridden):
 KERNEL_DIR=/lib/modules/$(KERNEL)/build
 KERNEL_INC=$(KERNEL_DIR)/include

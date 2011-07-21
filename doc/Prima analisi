@@ -1,0 +1,23 @@
+CASO RETE UNICA
+Ogni nodo viene identificato da un identificatore
+Un nodo si salva una piccola tabella.
+LA tebella contiene un elenco di tutte le interfaccie di un nodo.
+Occorre il modo per identificare un nodo.
+Bisogna modificare la RREP inserendogli nel payload tutte le interfacce che possiamo raggiungere.
+I nodi intermedi si salvano queste informazioni.
+Le informazioni riguardo un nodo vengono cancellate nel momento in cui tutte le rotte delle sue interfaccie vanno in timeout.
+Nel caso in cui facciamo richiesta di un interfaccia non presente nella tabella ma è presente l'identificativo dell'host allora mandiamo l'indirizzo dell'altra interfaccia(quella conosciuta).
+Per evitare cicli su reti differenti (quindi anche sulla stessa rete) si modifica il controllo che diventa sull'identificativo rispetto al IP.
+
+
+CASO RETE UNICA
+Buongiorno,
+Siamo gli studenti del progetto AODV MultiInterface e vorremmo sottoporle quello che, secondo noi, dovremmo fare. Tutto questo per inquadrare bene gli obbiettivi
+
+Studiando il protocollo e il progetto abbiamo capito che ogni nodo ha una o più interfacce che possono appartenere o meno alla stessa rete. L'obbiettivo è quello di estendere il protocollo AODV in modo da far comunicare due nodi a prescindere da quale interfaccia stiano usando. Questo va esteso inoltre al caso in cui le interfacce siano su reti diverse.
+
+In attesa di una sua risposta
+Cordiali Saluti
+Fumagalli Simone
+Gadioli Davide
+Manfredi Andrea
