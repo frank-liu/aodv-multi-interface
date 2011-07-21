@@ -1,7 +1,0 @@
-Significato cartelle:
-
-doc -> documentazione, per ora comprende le slide su aodv, i trick che ci ha dato il prof per far funzionare le cose e le istruzioni per installare netkit.
-
-lab -> tutto il necessario per far partire un labaratorio in netkit pronto per provare se funziona quello hce abbiamo fatto.
-
-src -> i sorgenti di aodv-uu, quelli che andremo a modificare. Siccome aodv è un protocollo "astratto", ci sono diverse implementazioni, ovviamente ho preso quella consigliata dal prof.
