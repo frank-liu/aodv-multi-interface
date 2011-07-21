@@ -8,9 +8,9 @@ git commit -m "messaggio" -> registra tutte le modifiche aggiunte al repository 
 
 git push [origin-http master] -> sposta tutti i commit che avete fatto dal repository locale a quello remoto. NB: sposta solo i cambiamenti fino all'ultimo commit, non quello che avete aggiunto con add.
 
-git pull [origin-http master] -> sposta il repository remoto in quello locale, quindi sovrascrive tutti gli eventuali cambiamenti che avete fatto
+git pull [origin-http master] -> sposta il repository remoto in quello locale.
 
-git checkout -> prende tutti i file diversi che sono stati aggiunti dagli altri
+git checkout -f -> porta la copia locale all'ultima versione scaricata dal repository remoto, quindi annulla tutte le modifiche effettuate
 
 
 
