@@ -1,7 +1,7 @@
-ifconfig eth1 172.10.10.1 up
-ifconfig eth1 hw ether 00:00:00:00:00:10
-ifconfig eth2 10.0.0.1 up
-ifconfig eth2 hw ether 00:00:00:00:10:00
+ifconfig eth0 172.10.10.1 up
+ifconfig eth0 hw ether 00:00:00:00:00:10
+ifconfig eth1 10.0.0.1 up
+ifconfig eth1 hw ether 00:00:00:00:10:00
 
 # White-list for r1
 iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:20 -j ACCEPT
@@ -9,5 +9,13 @@ iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:30:00 -j ACCEP
 
 
 # Drop any other packet coming from a different MAC
-iptables -t mangle -A PREROUTING -i eth1 -j DROP
+iptables -t mangle -A PREROUTING -i eth0 -j DROP
+
+
+# Start tcpdump
+tcpdump -i eth0 > /hosthome/dev/aodv-multi-interface/pc1/capture_eth0-pcap
+tcpdump -i eth1 > /hosthome/dev/aodv-multi-interface/pc1/capture_eth1-pcap
+
+# Start aodvd as demon
+/hosthome/dev/aodv-multi-interface/src/aodvd -l -r 3 -i eth0 -d
 
