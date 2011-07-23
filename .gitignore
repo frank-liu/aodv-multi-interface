@@ -1,2 +1,7 @@
 #ignoro i file compilati
 *.o
+
+#ignoro i file layout di code::block
+*.layout
+*.layout.backup
+*.workspace

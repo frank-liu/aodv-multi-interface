@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="aodv-multi-interface" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/aodv-multi-interface" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="src/aodv_hello.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_hello.h" />
+		<Unit filename="src/aodv_neighbor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_neighbor.h" />
+		<Unit filename="src/aodv_rerr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_rerr.h" />
+		<Unit filename="src/aodv_rrep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_rrep.h" />
+		<Unit filename="src/aodv_rreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_rreq.h" />
+		<Unit filename="src/aodv_socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_socket.h" />
+		<Unit filename="src/aodv_timeout.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/aodv_timeout.h" />
+		<Unit filename="src/debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/debug.h" />
+		<Unit filename="src/defs.h" />
+		<Unit filename="src/endian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/list.h" />
+		<Unit filename="src/llf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/llf.h" />
+		<Unit filename="src/lnx/kaodv-debug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-debug.h" />
+		<Unit filename="src/lnx/kaodv-expl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-expl.h" />
+		<Unit filename="src/lnx/kaodv-ipenc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-ipenc.h" />
+		<Unit filename="src/lnx/kaodv-mod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-mod.h" />
+		<Unit filename="src/lnx/kaodv-netlink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-netlink.h" />
+		<Unit filename="src/lnx/kaodv-queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lnx/kaodv-queue.h" />
+		<Unit filename="src/lnx/kaodv.h" />
+		<Unit filename="src/lnx/kaodv.mod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/locality.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/locality.h" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/nl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/nl.h" />
+		<Unit filename="src/params.h" />
+		<Unit filename="src/routing_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/routing_table.h" />
+		<Unit filename="src/seek_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/seek_list.h" />
+		<Unit filename="src/timer_queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/timer_queue.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
