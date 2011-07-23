@@ -1,7 +1,7 @@
-cmd_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o := gcc -Wp,-MD,/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/.kaodv-netlink.o.d  -nostdinc -isystem /usr/lib/gcc/i486-linux-gnu/4.6.1/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -O2 -Wframe-larger-than=1024  -fno-stack-protector   -D__arch_um__ -DSUBARCH=\"i386\" -Iarch/um/include -I/hosthome/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas -Dvmap=kernel_vmap -Din6addr_loopback=kernel_in6addr_loopback -Din6addr_any=kernel_in6addr_any -funit-at-a-time -march=i686 -mtune=core2 -mtune=generic -mpreferred-stack-boundary=2 -ffreestanding -D_LARGEFILE64_SOURCE -Derrno=kernel_errno -Dsigprocmask=kernel_sigprocmask -Dmktime=kernel_mktime -Dstrrchr=kernel_strrchr -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign   -D KERNEL26   -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kaodv_netlink)"  -D"KBUILD_MODNAME=KBUILD_STR(kaodv)" -c -o /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.c
+cmd_/hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o := gcc -Wp,-MD,/hosthome/dev/aodv-multi-interface/src/lnx/.kaodv-netlink.o.d  -nostdinc -isystem /usr/lib/i386-linux-gnu/gcc/i486-linux-gnu/4.6.1/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -O2 -Wframe-larger-than=1024  -fno-stack-protector   -D__arch_um__ -DSUBARCH=\"i386\" -Iarch/um/include -I/hosthome/netkit/kernel/build/linux-2.6.26.5/arch/um/include/skas -Dvmap=kernel_vmap -Din6addr_loopback=kernel_in6addr_loopback -Din6addr_any=kernel_in6addr_any -funit-at-a-time -march=i686 -mtune=core2 -mtune=generic -mpreferred-stack-boundary=2 -ffreestanding -D_LARGEFILE64_SOURCE -Derrno=kernel_errno -Dsigprocmask=kernel_sigprocmask -Dmktime=kernel_mktime -Dstrrchr=kernel_strrchr -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign   -D KERNEL26   -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kaodv_netlink)"  -D"KBUILD_MODNAME=KBUILD_STR(kaodv)" -c -o /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.c
 
-deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o := \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.c \
+deps_/hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o := \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.c \
   include/linux/version.h \
   include/linux/if.h \
   include/linux/types.h \
@@ -51,7 +51,7 @@ deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o := \
     $(wildcard include/config/debug/spinlock/sleep.h) \
     $(wildcard include/config/printk.h) \
     $(wildcard include/config/numa.h) \
-  /usr/lib/gcc/i486-linux-gnu/4.6.1/include/stdarg.h \
+  /usr/lib/i386-linux-gnu/gcc/i486-linux-gnu/4.6.1/include/stdarg.h \
   include/linux/linkage.h \
   include/asm/linkage.h \
   include/asm/arch/linkage.h \
@@ -557,13 +557,13 @@ deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o := \
   include/net/neighbour.h \
   include/net/rtnetlink.h \
   include/net/netlink.h \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.h \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-expl.h \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-queue.h \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-debug.h \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.h \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-expl.h \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-queue.h \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv-debug.h \
   include/linux/in.h \
-  /hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv.h \
+  /hosthome/dev/aodv-multi-interface/src/lnx/kaodv.h \
 
-/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o: $(deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o)
+/hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o: $(deps_/hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o)
 
-$(deps_/hosthome/gadio-netkit/aodv-multi-interface/src/lnx/kaodv-netlink.o):
+$(deps_/hosthome/dev/aodv-multi-interface/src/lnx/kaodv-netlink.o):

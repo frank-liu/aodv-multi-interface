@@ -10,12 +10,12 @@ git push [origin-http master] -> sposta tutti i commit che avete fatto dal repos
 
 git pull [origin-http master] -> sposta il repository remoto in quello locale.
 
-git checkout -f -> porta la copia locale all'ultima versione scaricata dal repository remoto, quindi annulla tutte le modifiche effettuate
+git checkout -f -> porta la copia locale all'ultima versione scaricata dal repository remoto, quindi annulla tutte le modifiche effettuate. Oppure potete specificare un cammit specifico al quale ritornare locale o remoto. Lista dei commit remota https://github.com/Aleck/aodv-multi-interface/commits/master
 
 
 
-Quindi in generale quando si vuole lavorare si dovrebbe
-git checkout per ottenere eventuali modifiche che hanno fatto gli altri
+Quindi in generale quando si vuole lavorare si dovrebbe:
+git pull
 
 <si lavora>
 
@@ -26,5 +26,5 @@ git commit -m "messaggio"
 
 etc.etc.
 
-alla fine salvare le modfiche nel repository remoto
+<alla fine salvare le modfiche nel repository remoto>
 git push
