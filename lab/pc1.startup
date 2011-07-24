@@ -13,11 +13,9 @@ iptables -t mangle -A PREROUTING -i eth0 -j DROP
 iptables -t mangle -A PREROUTING -i eth1 -j DROP
 
 # Start tcpdump
-tcpdump -i eth0 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc1/capture_eth0.pcap &
-tcpdump -i eth1 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc1/capture_eth1.pcap &
+tcpdump -i any -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc1/capture.pcap &
 
 # Start aodvd as demon
 cd /hosthome/dev/aodv-multi-interface/src
 ./aodvd -l -r 3 -i eth0 -d
-./aodvd -l -r 3 -i eth1 -d
 
