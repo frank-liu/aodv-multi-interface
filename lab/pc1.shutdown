@@ -1,5 +1,5 @@
 # Copy the lof from aodvd in the lab directory
-cp -u /var/log/aodvd.log /hosthome/dev/aodv-multi-interface/lab/pc1/
+cp -f /var/log/aodvd.log /hosthome/dev/aodv-multi-interface/lab/pc1/
 
 # Copy the routnig table
-cp -u /var/log/aodvd.rtlog /hosthome/dev/aodv-multi-interface/lab/pc1
+cp -f /var/log/aodvd.rtlog /hosthome/dev/aodv-multi-interface/lab/pc1
