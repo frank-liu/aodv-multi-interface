@@ -13,6 +13,9 @@ iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:10:00 -j ACCEP
 iptables -t mangle -A PREROUTING -i eth0 -j DROP
 iptables -t mangle -A PREROUTING -i eth1 -j DROP
 
+#Create the folder if needed
+mkdir -p /hosthome/dev/aodv-multi-interface/lab/pc3
+
 #Delete all previous log and capture file
 rm /hosthome/dev/aodv-multi-interface/lab/pc3/*.pcap /hosthome/dev/aodv-multi-interface/lab/pc3/*.log /hosthome/dev/aodv-multi-interface/lab/pc3/*.rtlog
 

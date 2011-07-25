@@ -9,6 +9,9 @@ iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:40 -j ACCEP
 # Drop any other packet coming from a different MAC
 iptables -t mangle -A PREROUTING -i eth0 -j DROP
 
+#Create the folder if needed
+mkdir -p /hosthome/dev/aodv-multi-interface/lab/pc2
+
 #Delete all previous log and capture file
 rm /hosthome/dev/aodv-multi-interface/lab/pc2/*.pcap /hosthome/dev/aodv-multi-interface/lab/pc2/*.log /hosthome/dev/aodv-multi-interface/lab/pc2/*.rtlog
 
