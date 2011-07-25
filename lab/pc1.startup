@@ -22,6 +22,9 @@ rm /hosthome/dev/aodv-multi-interface/lab/pc1/*.pcap /hosthome/dev/aodv-multi-in
 tcpdump -i eth0 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc1/capture_eth0.pcap &
 tcpdump -i eth1 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc1/capture_eth1.pcap &
 
+# Add delay time for tcpdump to work properly
+sleep 10
+
 # Start aodvd as demon
 cd /hosthome/dev/aodv-multi-interface/src
 ./aodvd -l -r 3 -i eth0 -d
