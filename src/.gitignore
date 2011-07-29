@@ -1,4 +1,4 @@
 #ignoro l'eseguibile compilato
 aodvd
 #ignoro il modulo kernel compilato in lnx
-koadv.ko
+*.ko
