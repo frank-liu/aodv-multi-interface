@@ -114,6 +114,18 @@ void NS_CLASS aodv_socket_init()
 	    exit(-1);
 	}
 #endif
+
+
+    memset(&ifr, 0, sizeof(struct ifreq));
+	strcpy(ifr.ifr_name, DEV_NR(i).ifname);
+
+	if (setsockopt(DEV_NR(i).sock, SOL_SOCKET, SO_BINDTODEVICE,
+		       &ifr, sizeof(ifr)) < 0) {
+	    fprintf(stderr, "SO_BINDTODEVICE failed for %s", DEV_NR(i).ifname);
+	    perror(" ");
+	    exit(-1);
+	}
+
 	/* Bind the socket to the AODV port number */
 	memset(&aodv_addr, 0, sizeof(aodv_addr));
 	aodv_addr.sin_family = AF_INET;
@@ -130,16 +142,6 @@ void NS_CLASS aodv_socket_init()
 	if (setsockopt(DEV_NR(i).sock, SOL_SOCKET, SO_BROADCAST,
 		       &on, sizeof(int)) < 0) {
 	    perror("SO_BROADCAST failed ");
-	    exit(-1);
-	}
-
-	memset(&ifr, 0, sizeof(struct ifreq));
-	strcpy(ifr.ifr_name, DEV_NR(i).ifname);
-
-	if (setsockopt(DEV_NR(i).sock, SOL_SOCKET, SO_BINDTODEVICE,
-		       &ifr, sizeof(ifr)) < 0) {
-	    fprintf(stderr, "SO_BINDTODEVICE failed for %s", DEV_NR(i).ifname);
-	    perror(" ");
 	    exit(-1);
 	}
 
