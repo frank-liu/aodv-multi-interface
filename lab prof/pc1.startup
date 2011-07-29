@@ -3,13 +3,10 @@ ifconfig eth0 hw ether 00:00:00:00:00:10
 ifconfig eth1 10.0.0.1/24 up
 ifconfig eth1 hw ether 00:00:00:00:10:00
 
-#default gateway
-route add default gw 172.10.10.4 dev eth0
 
 # White-list for pc1
 iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:20 -j ACCEPT
 iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:30:00 -j ACCEPT
-iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:40 -j ACCEPT
 
 
 # Drop any other packet coming from a different MAC

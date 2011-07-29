@@ -1,12 +1,22 @@
-ifconfig eth0 172.10.10.4 up
+ifconfig eth0 172.10.10.4/24 up
 ifconfig eth0 hw ether 00:00:00:00:00:40
+ifconfig eth1 10.0.0.4/24 up
+ifconfig eth1 hw ether 00:00:00:00:40:00
+ifconfig eth2 20.10.5.4/24 up
+ifconfig eth2 hw ether 00:00:00:40:00:00
 
-# White-list for r2
-iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:20 -j ACCEPT
-iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:50 -j ACCEPT
+#default gateway
+route add default gw 172.10.10.5 dev eth0
+
+# White-list for pc4
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:00:10 -j ACCEPT
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:70:00:00 -j ACCEPT
+iptables -t mangle -A PREROUTING  -m mac --mac-source 00:00:00:00:50:00 -j ACCEPT
 
 # Drop any other packet coming from a different MAC
 iptables -t mangle -A PREROUTING -i eth0 -j DROP
+iptables -t mangle -A PREROUTING -i eth1 -j DROP
+iptables -t mangle -A PREROUTING -i eth2 -j DROP
 
 #Create the folder if needed
 mkdir -p /hosthome/dev/aodv-multi-interface/lab/pc4
@@ -16,7 +26,9 @@ rm /hosthome/dev/aodv-multi-interface/lab/pc4/*.pcap /hosthome/dev/aodv-multi-in
 
 # Start tcpdump
 tcpdump -i eth0 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc4/capture_eth0.pcap &
+tcpdump -i eth1 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc4/capture_eth1.pcap &
+tcpdump -i eth2 -s 65535 -w /hosthome/dev/aodv-multi-interface/lab/pc4/capture_eth2.pcap &
 
 # Start aodvd as demon
 cd /hosthome/dev/aodv-multi-interface/src
-./aodvd -l -r 3 -i eth0 -d
+./aodvd -l -r 3 -i eth0,eth1,eth2 -d
