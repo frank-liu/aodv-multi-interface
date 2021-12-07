@@ -1,1 +1,0 @@
-cmd_/hosthome/dev/aodv-multi-interface/src/lnx/kaodv.ko := ld -r  -m elf_i386  --build-id -o /hosthome/dev/aodv-multi-interface/src/lnx/kaodv.ko /hosthome/dev/aodv-multi-interface/src/lnx/kaodv.o /hosthome/dev/aodv-multi-interface/src/lnx/kaodv.mod.o
